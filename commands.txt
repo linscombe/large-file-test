@@ -3,4 +3,13 @@
 # Pretty git log
 git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
 
+# git clone currentserver/project
+
+# index-filter
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch -r 3rd-pary-lib/testlib' HEAD
+
+# change origin server
+
+# force git push
+git push --force
 
