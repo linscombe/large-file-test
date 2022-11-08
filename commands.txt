@@ -1,0 +1,6 @@
+# Commands used for removing large files
+
+# Pretty git log
+git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
+
+
