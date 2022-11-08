@@ -5,6 +5,9 @@ git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
 
 # git clone currentserver/project
 
+# remove the file(s)
+git rm -r 3rd-party-lib/testlib
+
 # index-filter
 git filter-branch --index-filter 'git rm --cached --ignore-unmatch -r 3rd-pary-lib/testlib' HEAD
 
