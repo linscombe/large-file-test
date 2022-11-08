@@ -3,16 +3,32 @@
 # Pretty git log
 git log --graph --full-history --all --pretty=format:"%h%x09%d%x20%s"
 
-# git clone currentserver/project
+## STEPS
 
-# remove the file(s)
+# 1) git clone currentserver/project
+
+# 2) remove the file(s)
 git rm -r 3rd-party-lib/testlib
 
-# index-filter
-git filter-branch --index-filter 'git rm --cached --ignore-unmatch -r 3rd-pary-lib/testlib' HEAD
+# 3) git add/commit
 
-# change origin server
+# 4) index-filter
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch -r 3rd-party-lib/testlib' HEAD
 
-# force git push
+# 5) force git push
 git push --force
+
+# 6) get clone again to new directory to see the smaller version of the repo
+
+
+## Reference
+
+# change origin server - https://devconnected.com/how-to-change-git-remote-origin/
+git remote set-url origin https://git-repo/new-repository.git
+
+# or delete old origin then add new one
+https://stackoverflow.com/questions/9224754/how-to-remove-origin-from-git-repository
+
+# migrating project to GitHub
+https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/importing-a-git-repository-using-the-command-line
 
